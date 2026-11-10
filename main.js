@@ -1,109 +1,165 @@
-// What is JavaScript?
+// Variables
 
-// JavaScript is a programming language. It's primary purpose is to make web pages interactive.
+// We often find that a JavaScript application needs to interact with information
 
-// Programs in this language are called "Scripts"
+// Examples include an online shop where information belongs to the goods being sold or a chat application where information includes users, messages, etc.
 
-// JavaScript can run in the browser and it can also run on the server via the JavaScript Engine.
+// Variables are used to store this information.
 
-// Example of JavaScript engines include V8(Chrome, Opera, Edge.), Spidermonkey(Firefox)
+// A variable is a named storage for data. We can use variables to store all kinds of data.
 
-// How do Engines work?
+// Let's introduce or first keyword which will allow us to delcare variables
 
-// 1. The engine reads the script
+// let
 
-// 2. Then it converts or compiles the script into machine code
+// Let's give this variable a name
 
-// What can we do with JavaScript in the browser?
+// let message;
 
-// JavaScript's capabilities depend of the environment it's running in. Example, node.js allows JavaScript to read and write files, perform network request etc.
+// Now let's put some data into that variable by using the assignment operator (=)
 
-// Other examples include
+let message = "Hello!";
 
-// Add new HTML to a webpage, change existing content, make modifications
+// The string(which we will cover shortly) is now saved into the memory area associated with the variable
 
-// React to user actions, mouse clicks, and key strokes
+// We can access it by simple using the variable name
 
-// Send request over the network to remote servers, download and upload files
+message;
 
-// Get and set up cookies, ask questions to the visitor, show messages.
+console.log(message);
 
-// Specifications and Manuals
+// Multiple variables can also be declared in the same line
 
-// ECMA-262 specification contains the msot in depth and detailed information on JavaScript. It defines the language.
+// Example
 
-// MDN (Mozilla) JavaScript Reference is the main manual with examples and other information. It has great in depth information about the language
+// let user = "John",
+//   age = "25",
+//   greeting = "How are you?";
 
-// Code editors and IDE's
+// It might appear to take up less space but it's best place a single variable per line of code. At least for the sake of readability
 
-// IDE referes tona powerful editor with many features. It's a full scale developent enviorment
+let user = "John";
+let age = 25;
+let greeting = "How are you?";
 
-// The most common example would be Visual Studio Code.
+// This multiline variant is longer but it's much easier to read
 
-// There are also lightweight editors that are simpler to use and offer speed and simplicity.
+// We can better understand the concept of a "variable" if we imagine it as a container for data with a unique label on it
 
-// Examples include Sublime Text, Notepad++, Vim, Emacs
+// Variable naming
 
-// There is not best editor or IDE. Use simply what feels best for you. 
+// There are two limitations on variable names in JavaScript:
 
-// Let's build our first program 
+// 1. The name must only contain letters, digits, or the symbols $ and _
 
-// We begin by introducing the "script" tag 
+// 2. The first character cannot be a digit
 
-// We can use tis tag to insert JavaScript into an HTML document just about anywhere.
+// Examples of valid name
 
-// Example 
+let userName = "Spiderman";
 
-<!DOCTYPE HTML>
-<html>
+let test123 = "Test";
 
-<body>
+// When variable names contain multiple words, camelCase is commonly used. camelCase is when the the first letter of every subsequent word is Capital
 
-  <p>Before the script...</p>
+// Examples
 
-  <script>
-    alert( 'Hello, world!' );
-  </script>
+// testScore, favoriteFood, userRating
 
-  <p>...After the script.</p>
+// Tip
 
-</body>
+// Case matters. apple and APPLE are two different variables.
 
-</html>
+// Constants
 
-// External Scripts
+// Constants are variables that cannot be reassigned and attempting to do so would result in an error
 
-// Givent the amount of JavaScript code in a single web page it's more common to write our code in a seperate document and attach it using the src attriubte
+// Example
 
-// Example 2
+const christmasDay = "12/25";
 
-<!DOCTYPE HTML>
-<html>
+// When you are sure that the variable will never change declare it using const to gurantee and communicate that to everyone
 
-<body>
+// Variables shoudl be named cleanly and have obvious meaning in order to describe the data that it stores
 
-  <p>Before the script...</p>
+// Some common practices when it comes to naming variables include
 
-  <script src ="js/script1.js"></script>
+// Use human-reable names, stay away from short abbreviations, make names decriptive and concise.
 
-  <p>...After the script.</p>
+// Data Types
 
-</body>
+// In JavaScript a value is always certain type
 
-</html>
+// There are eight basic Data Types in JavaScript.
 
-// Code Structure
+// Number
 
-// Statements
+// Example
 
-// Statements are syntax constructs and commands that perform actions. We can have as many statements as we please. They can be seperated with a semi colon
+let n = 123;
 
-// Example 
+// The number type represents both integers and floating points.
 
-alert('Hello'); alert('World');
+// BigInt
 
-// Comments
+// This represnts numbers of arbitrary length and is not commonly used in production JavScript
 
-// As programs become more complex it becomes normal to add comments which describe what the code does and why
+// String
 
-// To add a comment on a line simply type to foward slashes //
+// Example
+
+let phrase = "May you please pass the salt?";
+
+// Strings may have zero or more characters and are found inside quotation marks
+
+// Boolean
+
+// Boolean has only two values, true and false.
+
+// Example
+
+let nameFieldChecked = true;
+
+let ageFieldChecked = false;
+
+// Null
+
+// In JavaScript null a special value which represents "nothing", "empty", or value unknown.
+
+// Example
+
+let height = null;
+
+// Undefined
+
+// Undefined is a special value that means no value has been assigned. If a variable is declared but not assigned then the value is undefined
+
+// The typeof operator
+
+// The typeof operator returns the type of the operand. It can be useful when we want to process values of different types differently or just want to do a check
+
+// Interactions
+
+// Alert
+
+// Shows a message and waits for the user to press "OK"
+
+// Example
+
+alert("Hello!");
+
+// Prompt
+
+// The function prompt accepts two arguments
+
+// Example
+
+// result = prompt(title, [default]);
+
+// title is the text next to the vistor and default is an optional parameter
+
+// Confirm
+
+// Example
+
+result = confirm(question);
